@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PATIENT List</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body id="Create">
+    <%- include('../partials/navbar') %>
+    <!-- <h1>Create Patients</h1>
+
+    <form action="/patients" method="post">
+      <label for="name">Name:</label>
+      <input name="name" id="name" type="text" />
+
+      <label for="category">Is The Patient Ready To Be Discharged?</label>
+
+      <input
+        type="checkbox"
+        name="isReadyToDischarge"
+        id="isReadyToDischarge"
+      />
+  <form action="/patients" method="post">
+
+    <form action="/patients" method="post"></form>
+      <label for="gender">Gender:</label>
+      <input name="gender" id="gender" type="text" /> -->
+     <!-- <button type="submit">Create Patient</button> -->
+    
+    <h2>Add Patient</h2>
+
+    <form action="/patients" method="POST">
+
+        <div id="name">
+            <label for="name">Name:</label><br>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                minlength="7"
+                maxlength="30"
+                required>
+        </div>
+
+        <br>
+
+        <div id="gender">
+            <label for="Gender">Gender:</label><br>
+           <select id="Gender" name="Gender" required>
+    <option value="">Select</option>
+    <option value="Female">Female</option>
+    <option value="Male">Male</option>
+</select>
+        </div>
+
+        <br>
+
+        <div id="Illness">
+            <label for="Illness">Illness:</label><br>
+            <input
+                type="text"
+                id="Illness"
+                name="Illness"
+                required>
+        </div>
+
+        <br>
+
+        <div id="meds">
+            <label for="Medication">Medication:</label><br>
+            <input
+                type="text"
+                id="Medication"
+                name="Medication"
+                required>
+        </div>
+
+        <br>
+
+        <div id="days">
+            <label for="daysOfAdmission">Days Of Admission :</label><br>
+            <input
+                type="number"
+                id="daysOfAdmission"
+                name="daysOfAdmission"
+                min="1"
+                max="100"
+                required>
+        </div>
+
+        <br>
+
+        <div id="Ward">
+            <label for="wards">Ward:</label><br>
+            <select id="wards" name="wards" required>
+                <option value="">Select Ward</option>
+                <option value="Adults">Adults</option>
+                <option value="Peadiatric">Peadiatric</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div id="discharge">
+            <label for="IsReadyToDischarge">
+                <input
+                    type="checkbox"
+                    id="IsReadyToDischarge"
+                    name="IsReadyToDischarge"
+                    value="true">
+                Ready To Discharge
+            </label>
+        </div>
+
+        <br>
+
+        <button id="addBtn" type="submit">Add Patient</button>
+
+    </form>
+
+    </form>
+  </body>
+</html>

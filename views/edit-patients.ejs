@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Patient</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <%- include('../partials/navbar') %>
+<h1>Edit Patient</h1>
+
+<form action="/patients/<%= Patient._id %>?_method=PUT" method="POST">
+
+    <label for="name">Name:</label>
+    <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        value="<%= Patient.name %>"
+        required>
+
+    <br><br>
+
+
+    <label for="Gender">Gender:</label>
+    <select name="Gender" id="Gender">
+
+        <option value="Female" 
+            <% if(Patient.Gender === "Female"){ %> selected <% } %>>
+            Female
+        </option>
+
+        <option value="Male"
+            <% if(Patient.Gender === "Male"){ %> selected <% } %>>
+            Male
+        </option>
+
+    </select>
+
+    <br><br>
+
+
+    <label for="Illness">Illness:</label>
+    <input 
+        type="text" 
+        id="Illness" 
+        name="Illness"
+        value="<%= Patient.Illness %>"
+        required>
+
+    <br><br>
+
+
+    <label for="Medication">Medication:</label>
+    <input 
+        type="text" 
+        id="Medication" 
+        name="Medication"
+        value="<%= Patient.Medication %>"
+        required>
+
+    <br><br>
+
+
+    <label for="daysOfAdmission">Days Of Admission:</label>
+    <input 
+        type="number" 
+        id="daysOfAdmission"
+        name="daysOfAdmission"
+        min="1"
+        max="100"
+        value="<%= Patient.daysOfAdmission %>"
+        required>
+
+    <br><br>
+
+
+    <label for="wards">Ward:</label>
+
+    <select name="wards" id="wards">
+
+        <option value="Adults"
+            <% if(Patient.wards === "Adults"){ %> selected <% } %>>
+            Adults
+        </option>
+
+        <option value="Peadiatric"
+            <% if(Patient.wards === "Peadiatric"){ %> selected <% } %>>
+            Peadiatric
+        </option>
+
+    </select>
+
+    <br><br>
+
+
+    <label for="IsReadyToDischarge">
+        Is the patient ready to be discharged?
+    </label>
+
+    <input 
+        type="checkbox"
+        id="IsReadyToDischarge"
+        name="IsReadyToDischarge"
+        value="true"
+        <% if(Patient.IsReadyToDischarge){ %> checked <% } %>>
+
+    <br><br>
+
+
+    <button type="submit">
+        Edit Patient
+    </button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/style.css" />
+  </head>
+  <body>
+
+    <h1> Patient Details</h1>
+
+    <p>Name: <%= Patient.name %></p>
+    <% if(Patient.IsReadyToDischarge) {%>
+        <p>The patient is ready to be Discharged</p>
+    <%} else{ %>
+        <p>The patient is NOT ready to be Discharged!</p>
+
+    <% }%>
+
+    <form action="/patients/<%= Patient._id %>?_method=DELETE" method="post">
+        <button>Delete Patient</button>
+    </form>
+
+    <form action="/patients/<%= Patient._id %>/edit" method="get">
+        <button id="edit-btn" >Edit Patient</button>
+    </form>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Details</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <%- include('../partials/navbar') %>
+    <h1>Patient Details</h1>
+
+    <p>Name: <%= Patient.name %></p>
+
+    <p>Gender: <%= Patient.Gender %></p>
+
+    <p>Illness: <%= Patient.Illness %></p>
+
+    <p>Medication: <%= Patient.Medication %></p>
+
+    <p>Days Of Admission: <%= Patient.daysOfAdmission %></p>
+
+    <p>Ward: <%= Patient.wards %></p>
+
+
+<% if(Patient.IsReadyToDischarge) { %>
+  <p>The patient is ready to be discharged</p>
+<% } else { %>
+  <p>The patient is not ready to be discharged</p>
+<% } %>
+
+
+    <br>
+
+    <form action="/patients/<%= Patient._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Patient</button>
+    </form>
+
+
+    <br>
+
+    <form action="/patients/<%= Patient._id %>/edit" method="GET">
+        <button type="submit" id="edit-btn">Edit Patient</button>
+    </form>
+
+
+</body>
+</html>

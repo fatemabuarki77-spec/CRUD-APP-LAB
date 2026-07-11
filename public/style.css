@@ -1,0 +1,330 @@
+/* Hospital Website Professional Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", "Helvetica", sans-serif;
+  background-color: #f4f8fb;
+  color: #333;
+}
+#pic {
+  display: block;
+  width: 85%;
+  max-width: 1100px;
+  height: 450px;
+  object-fit: cover;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 75, 135, 0.25);
+}
+
+/* Navigation */
+nav {
+  background-color: #004b87;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #9ee7ff;
+}
+
+/* Main Welcome Section */
+h1 {
+  text-align: center;
+  margin-top: 60px;
+  color: #004b87;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background-color: #00a8cc;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+/* Hospital Image */
+#hospital-pic {
+  display: block;
+  width: 85%;
+  max-width: 1100px;
+  height: 450px;
+  object-fit: cover;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 75, 135, 0.25);
+}
+
+/* Content Sections */
+section {
+  background-color: white;
+  width: 85%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  color: #004b87;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+  background-color: #00a8cc;
+  color: white;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #007fa3;
+}
+
+/* Forms */
+form {
+  background-color: white;
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  color: #004b87;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccdce8;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #00a8cc;
+  outline: none;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 25px;
+  margin: 20px;
+  border-left: 5px solid #00a8cc;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #004b87;
+}
+
+/* Footer */
+footer {
+  background-color: #00345f;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+/* Add Patient Page */
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #e8f4f8, #f7fbfc);
+  margin: 0;
+  padding: 40px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page title */
+h2 {
+  color: #0b5d75;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* Form container */
+form {
+  background: white;
+  width: 450px;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Each input section */
+form div {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+  font-size: 17px;
+  font-weight: 600;
+  color: #0b5d75;
+}
+
+/* Text inputs and dropdowns */
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 2px solid #c9e3ea;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9fdff;
+  transition: 0.3s;
+}
+
+/* Input focus effect */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #16a085;
+  box-shadow: 0 0 5px rgba(22, 160, 133, 0.4);
+}
+
+/* Checkbox section */
+#discharge {
+  background-color: #eaf8f4;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #16a085;
+}
+
+#IsReadyToDischarge {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Add button */
+#addBtn {
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #40d1b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover */
+#addBtn:hover {
+  background-color: #0f7865;
+}
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #f4f8fb;
+  color: #333;
+}
+
+/* Page Title */
+#all {
+  text-align: center;
+  color: #0b5ed7;
+  margin: 40px 0 30px;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+/* Patient Card */
+.patient-card {
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #0b5ed7;
+  transition: 0.3s ease;
+}
+
+.patient-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.patient-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+/* Button */
+.patient-link {
+  display: inline-block;
+  text-decoration: none;
+  background: #0b5ed7;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.patient-link:hover {
+  background: #084298;
+}
