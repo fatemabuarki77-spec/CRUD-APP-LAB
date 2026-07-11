@@ -14,7 +14,7 @@
 <form action="/patients/<%= Patient._id %>?_method=PUT" method="POST">
 
     <label for="name">Name:</label>
-    <input 
+    <input required 
         type="text" 
         id="name" 
         name="name" 
@@ -43,7 +43,7 @@
 
 
     <label for="Illness">Illness:</label>
-    <input 
+    <input required
         type="text" 
         id="Illness" 
         name="Illness"
@@ -54,7 +54,7 @@
 
 
     <label for="Medication">Medication:</label>
-    <input 
+    <input required
         type="text" 
         id="Medication" 
         name="Medication"
@@ -65,7 +65,7 @@
 
 
     <label for="daysOfAdmission">Days Of Admission:</label>
-    <input 
+    <input required
         type="number" 
         id="daysOfAdmission"
         name="daysOfAdmission"
