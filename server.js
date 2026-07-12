@@ -49,16 +49,15 @@ app.post(`/patients`, async (req, res) => {
     console.log(`cannot add patient`, err);
   }
 });
+// post the fields you need from the body
 // app.post("/patients", async (req, res) => {
 //   try {
-//     const { name, age, gender, diagnosis, IsReadyToDischarge } = req.body;
-
+//
 //     const newPatient = {
-//       name,
-//       age,
-//       gender,
-//       diagnosis,
-//       IsReadyToDischarge: Boolean(IsReadyToDischarge),
+//       name:req.body.name,
+//       gender:req.body.gender,
+//       illness::req.body.illness
+//       IsReadyToDischarge::req.body.IsReadyToDischarge,
 //     };
 
 //     const createdPatient = await Patient.create(newPatient);
@@ -130,16 +129,14 @@ app.put("/patients/:id", async (req, res) => {
   }
 });
 
-// app.put("/patients/:id", async (req, res) => {
-//   try {
-//     const { name, age, gender, diagnosis, IsReadyToDischarge } = req.body;
-
+// post the fields you need from the body//
+// try {
+//
 //     const updatedPatient = {
-//       name,
-//       age,
-//       gender,
-//       diagnosis,
-//       IsReadyToDischarge: Boolean(IsReadyToDischarge),
+//       name:req.body.name,
+//       gender:req.body.gender,
+//       illness::req.body.illness
+//       IsReadyToDischarge::req.body.IsReadyToDischarge,
 //     };
 
 //     await Patient.findByIdAndUpdate(req.params.id, updatedPatient);
